@@ -305,6 +305,41 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0.5rem;
+  border: none;
+  padding: 0;
+}
+
+.engineering-ops button {
+  padding: 0.6rem 0.4rem;
+  border-radius: 4px;
+  border: 2px solid var(--brown);
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  background: linear-gradient(180deg, var(--button-light) 0%, var(--button-dark) 100%);
+  color: var(--brown);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  font-family: 'Courier New', monospace;
+  box-shadow: 
+    0 3px 6px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.engineering-ops button:hover {
+  background: linear-gradient(180deg, #d4af9a 0%, var(--button-light) 100%);
+  transform: translateY(-1px);
+}
+
+.engineering-ops button:active {
+  transform: translateY(2px);
+  box-shadow: 
+    0 1px 3px rgba(0, 0, 0, 0.4),
+    inset 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 640px) {
