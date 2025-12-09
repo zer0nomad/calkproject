@@ -9,6 +9,9 @@ msgstr ""
 msgid "Calculator"
 msgstr "Calculator"
 
+msgid "A lightweight example with i18n"
+msgstr "A lightweight example with i18n"
+
 msgid "A"
 msgstr "A"
 
@@ -32,6 +35,9 @@ msgstr "Square A"
 
 msgid "Sqrt A"
 msgstr "Sqrt A"
+
+msgid "Mathematical operations"
+msgstr "Mathematical operations"
 
 msgid "Result"
 msgstr "Result"

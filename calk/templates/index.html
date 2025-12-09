@@ -13,8 +13,8 @@
         <div class="header">
           <div class="logo">C</div>
           <div>
-            <div class="title">{{ gettext('Calculator') }}</div>
-            <div class="subtitle">{{ gettext('A lightweight example with i18n') }}</div>
+            <h1 class="title">{{ gettext('Calculator') }}</h1>
+            <p class="subtitle">{{ gettext('A lightweight example with i18n') }}</p>
           </div>
         </div>
 
@@ -22,34 +22,35 @@
           <div class="grid">
             <div class="field">
               <label for="a">{{ gettext('A') }}</label>
-              <input id="a" name="a" type="number" step="any" inputmode="decimal" placeholder="0">
+              <input id="a" name="a" type="number" step="any" inputmode="decimal" placeholder="0" autocomplete="off">
             </div>
 
             <div class="field">
               <label for="b">{{ gettext('B') }}</label>
-              <input id="b" name="b" type="number" step="any" inputmode="decimal" placeholder="0">
+              <input id="b" name="b" type="number" step="any" inputmode="decimal" placeholder="0" autocomplete="off">
             </div>
           </div>
 
-          <div class="ops" role="group" aria-label="Operations">
-            <button type="submit" name="operation" value="add">{{ gettext('Add') }}</button>
-            <button type="submit" name="operation" value="sub">{{ gettext('Subtract') }}</button>
-            <button type="submit" name="operation" value="mul">{{ gettext('Multiply') }}</button>
-            <button type="submit" name="operation" value="div">{{ gettext('Divide') }}</button>
-            <button type="submit" name="operation" value="square">{{ gettext('Square A') }}</button>
-            <button type="submit" name="operation" value="sqrt">{{ gettext('Sqrt A') }}</button>
-          </div>
+          <fieldset class="ops" role="group" aria-label="Operations">
+            <legend class="visually-hidden">{{ gettext('Mathematical operations') }}</legend>
+            <button type="submit" name="operation" value="add" aria-label="{{ gettext('Add') }}" title="{{ gettext('Add') }}">+</button>
+            <button type="submit" name="operation" value="sub" aria-label="{{ gettext('Subtract') }}" title="{{ gettext('Subtract') }}">−</button>
+            <button type="submit" name="operation" value="mul" aria-label="{{ gettext('Multiply') }}" title="{{ gettext('Multiply') }}">×</button>
+            <button type="submit" name="operation" value="div" aria-label="{{ gettext('Divide') }}" title="{{ gettext('Divide') }}">÷</button>
+            <button type="submit" name="operation" value="square" aria-label="{{ gettext('Square A') }}" title="{{ gettext('Square A') }}">x²</button>
+            <button type="submit" name="operation" value="sqrt" aria-label="{{ gettext('Sqrt A') }}" title="{{ gettext('Sqrt A') }}">√</button>
+          </fieldset>
         </form>
 
         {% if result is not none %}
-        <div class="display" role="status" aria-live="polite">
+        <div class="display" role="status" aria-live="polite" aria-atomic="true">
           <div class="label">{{ gettext('Result') }}</div>
           <div class="value">{{ result }}</div>
         </div>
         {% endif %}
 
         {% if error %}
-        <div class="error" role="alert">{{ error }}</div>
+        <div class="error" role="alert" aria-live="assertive">{{ error }}</div>
         {% endif %}
       </main>
     </div>

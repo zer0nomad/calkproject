@@ -9,6 +9,9 @@ msgstr ""
 msgid "Calculator"
 msgstr "Калькулятор"
 
+msgid "A lightweight example with i18n"
+msgstr "Лёгкий пример с интернационализацией"
+
 msgid "A"
 msgstr "А"
 
@@ -32,6 +35,9 @@ msgstr "Возвести A в квадрат"
 
 msgid "Sqrt A"
 msgstr "Квадратный корень A"
+
+msgid "Mathematical operations"
+msgstr "Математические операции"
 
 msgid "Result"
 msgstr "Результат"
