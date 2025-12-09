@@ -1,0 +1,172 @@
+# German translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-12-09 12:27+0000\n"
+"PO-Revision-Date: 2025-12-09 12:27+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: calk/routes/main.py:24
+msgid "Invalid input for A"
+msgstr "Ungültige Eingabe für A"
+
+#: calk/routes/main.py:30
+msgid "Invalid input for B"
+msgstr "Ungültige Eingabe für B"
+
+#: calk/routes/main.py:79
+msgid "Unknown operation"
+msgstr "Unbekannte Operation"
+
+#: calk/routes/main.py:81
+msgid "Cannot divide by zero. Please check your values."
+msgstr "Durch Null kann nicht dividiert werden. Bitte überprüfen Sie Ihre Werte."
+
+#: calk/routes/main.py:86
+msgid "Cannot take square root of a negative number."
+msgstr "Es ist nicht möglich, die Quadratwurzel einer negativen Zahl zu ziehen."
+
+#: calk/routes/main.py:88
+msgid "Logarithm is only defined for positive numbers."
+msgstr "Der Logarithmus ist nur für positive Zahlen definiert."
+
+#: calk/routes/main.py:90
+msgid "Factorial is only defined for non-negative integers."
+msgstr "Die Fakultät ist nur für nicht-negative ganze Zahlen definiert."
+
+#: calk/routes/main.py:92
+msgid "Factorial requires a whole number (integer)."
+msgstr "Die Fakultät erfordert eine ganze Zahl."
+
+#: calk/routes/main.py:94
+msgid "Invalid logarithm base. Must be positive and not equal to 1."
+msgstr "Ungültige Logarithmenbasis. Muss positiv und nicht gleich 1 sein."
+
+#: calk/routes/main.py:98
+msgid "Calculation error. Please check your input and try again."
+msgstr "Rechenfehler. Bitte überprüfen Sie Ihre Eingabe und versuchen Sie es erneut."
+
+#: calk/templates/index.html:6 calk/templates/index.html:16
+msgid "Calculator"
+msgstr "Rechner"
+
+#: calk/templates/index.html:17
+msgid "Scientific"
+msgstr "Wissenschaftlich"
+
+#: calk/templates/index.html:24
+msgid "A"
+msgstr "A"
+
+#: calk/templates/index.html:29
+msgid "B"
+msgstr "B"
+
+#: calk/templates/index.html:38
+msgid "Basic"
+msgstr "Basis"
+
+#: calk/templates/index.html:39
+msgid "Engineering"
+msgstr "Technik"
+
+#: calk/templates/index.html:44
+msgid "Basic mathematical operations"
+msgstr "Grundlegende mathematische Operationen"
+
+#: calk/templates/index.html:45
+msgid "Add"
+msgstr "Addieren"
+
+#: calk/templates/index.html:46
+msgid "Subtract"
+msgstr "Subtrahieren"
+
+#: calk/templates/index.html:47
+msgid "Multiply"
+msgstr "Multiplizieren"
+
+#: calk/templates/index.html:48
+msgid "Divide"
+msgstr "Dividieren"
+
+#: calk/templates/index.html:49
+msgid "Square A"
+msgstr "Quadrat A"
+
+#: calk/templates/index.html:50
+msgid "Sqrt A"
+msgstr "Quadratwurzel A"
+
+#: calk/templates/index.html:51
+msgid "Reciprocal"
+msgstr "Kehrwert"
+
+#: calk/templates/index.html:52
+msgid "Negate"
+msgstr "Negation"
+
+#: calk/templates/index.html:57
+msgid "Scientific functions"
+msgstr "Wissenschaftliche Funktionen"
+
+#: calk/templates/index.html:58
+msgid "Sine"
+msgstr "Sinus"
+
+#: calk/templates/index.html:59
+msgid "Cosine"
+msgstr "Kosinus"
+
+#: calk/templates/index.html:60
+msgid "Tangent"
+msgstr "Tangens"
+
+#: calk/templates/index.html:61
+msgid "Log10"
+msgstr "Log10"
+
+#: calk/templates/index.html:62
+msgid "Natural Log"
+msgstr "Natürlicher Logarithmus"
+
+#: calk/templates/index.html:63
+msgid "Exponential"
+msgstr "Exponential"
+
+#: calk/templates/index.html:64
+msgid "Factorial"
+msgstr "Fakultät"
+
+#: calk/templates/index.html:65
+msgid "Percent"
+msgstr "Prozent"
+
+#: calk/templates/index.html:66
+msgid "Power"
+msgstr "Potenz"
+
+#: calk/templates/index.html:67
+msgid "Pi"
+msgstr "Pi"
+
+#: calk/templates/index.html:68
+msgid "Euler"
+msgstr "Euler"
+
+#: calk/templates/index.html:74
+msgid "Result"
+msgstr "Ergebnis"
+

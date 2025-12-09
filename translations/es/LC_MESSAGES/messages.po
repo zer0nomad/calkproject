@@ -1,0 +1,172 @@
+# Spanish translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-12-09 12:27+0000\n"
+"PO-Revision-Date: 2025-12-09 12:27+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: calk/routes/main.py:24
+msgid "Invalid input for A"
+msgstr "Entrada inválida para A"
+
+#: calk/routes/main.py:30
+msgid "Invalid input for B"
+msgstr "Entrada inválida para B"
+
+#: calk/routes/main.py:79
+msgid "Unknown operation"
+msgstr "Operación desconocida"
+
+#: calk/routes/main.py:81
+msgid "Cannot divide by zero. Please check your values."
+msgstr "No se puede dividir entre cero. Verifique sus valores."
+
+#: calk/routes/main.py:86
+msgid "Cannot take square root of a negative number."
+msgstr "No se puede sacar la raíz cuadrada de un número negativo."
+
+#: calk/routes/main.py:88
+msgid "Logarithm is only defined for positive numbers."
+msgstr "El logaritmo solo se define para números positivos."
+
+#: calk/routes/main.py:90
+msgid "Factorial is only defined for non-negative integers."
+msgstr "El factorial solo se define para números enteros no negativos."
+
+#: calk/routes/main.py:92
+msgid "Factorial requires a whole number (integer)."
+msgstr "El factorial requiere un número entero."
+
+#: calk/routes/main.py:94
+msgid "Invalid logarithm base. Must be positive and not equal to 1."
+msgstr "Base de logaritmo inválida. Debe ser positivo y no igual a 1."
+
+#: calk/routes/main.py:98
+msgid "Calculation error. Please check your input and try again."
+msgstr "Error de cálculo. Verifique su entrada e intente de nuevo."
+
+#: calk/templates/index.html:6 calk/templates/index.html:16
+msgid "Calculator"
+msgstr "Calculadora"
+
+#: calk/templates/index.html:17
+msgid "Scientific"
+msgstr "Científico"
+
+#: calk/templates/index.html:24
+msgid "A"
+msgstr "A"
+
+#: calk/templates/index.html:29
+msgid "B"
+msgstr "B"
+
+#: calk/templates/index.html:38
+msgid "Basic"
+msgstr "Básico"
+
+#: calk/templates/index.html:39
+msgid "Engineering"
+msgstr "Ingeniería"
+
+#: calk/templates/index.html:44
+msgid "Basic mathematical operations"
+msgstr "Operaciones matemáticas básicas"
+
+#: calk/templates/index.html:45
+msgid "Add"
+msgstr "Sumar"
+
+#: calk/templates/index.html:46
+msgid "Subtract"
+msgstr "Restar"
+
+#: calk/templates/index.html:47
+msgid "Multiply"
+msgstr "Multiplicar"
+
+#: calk/templates/index.html:48
+msgid "Divide"
+msgstr "Dividir"
+
+#: calk/templates/index.html:49
+msgid "Square A"
+msgstr "Cuadrado A"
+
+#: calk/templates/index.html:50
+msgid "Sqrt A"
+msgstr "Raíz cuadrada A"
+
+#: calk/templates/index.html:51
+msgid "Reciprocal"
+msgstr "Recíproco"
+
+#: calk/templates/index.html:52
+msgid "Negate"
+msgstr "Negar"
+
+#: calk/templates/index.html:57
+msgid "Scientific functions"
+msgstr "Funciones científicas"
+
+#: calk/templates/index.html:58
+msgid "Sine"
+msgstr "Seno"
+
+#: calk/templates/index.html:59
+msgid "Cosine"
+msgstr "Coseno"
+
+#: calk/templates/index.html:60
+msgid "Tangent"
+msgstr "Tangente"
+
+#: calk/templates/index.html:61
+msgid "Log10"
+msgstr "Log10"
+
+#: calk/templates/index.html:62
+msgid "Natural Log"
+msgstr "Logaritmo natural"
+
+#: calk/templates/index.html:63
+msgid "Exponential"
+msgstr "Exponencial"
+
+#: calk/templates/index.html:64
+msgid "Factorial"
+msgstr "Factorial"
+
+#: calk/templates/index.html:65
+msgid "Percent"
+msgstr "Porcentaje"
+
+#: calk/templates/index.html:66
+msgid "Power"
+msgstr "Potencia"
+
+#: calk/templates/index.html:67
+msgid "Pi"
+msgstr "Pi"
+
+#: calk/templates/index.html:68
+msgid "Euler"
+msgstr "Euler"
+
+#: calk/templates/index.html:74
+msgid "Result"
+msgstr "Resultado"
+

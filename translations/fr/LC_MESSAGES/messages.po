@@ -1,0 +1,172 @@
+# French translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-12-09 12:27+0000\n"
+"PO-Revision-Date: 2025-12-09 12:27+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: calk/routes/main.py:24
+msgid "Invalid input for A"
+msgstr "Entrée invalide pour A"
+
+#: calk/routes/main.py:30
+msgid "Invalid input for B"
+msgstr "Entrée invalide pour B"
+
+#: calk/routes/main.py:79
+msgid "Unknown operation"
+msgstr "Opération inconnue"
+
+#: calk/routes/main.py:81
+msgid "Cannot divide by zero. Please check your values."
+msgstr "Impossible de diviser par zéro. Veuillez vérifier vos valeurs."
+
+#: calk/routes/main.py:86
+msgid "Cannot take square root of a negative number."
+msgstr "Impossible de prendre la racine carrée d'un nombre négatif."
+
+#: calk/routes/main.py:88
+msgid "Logarithm is only defined for positive numbers."
+msgstr "Le logarithme n'est défini que pour les nombres positifs."
+
+#: calk/routes/main.py:90
+msgid "Factorial is only defined for non-negative integers."
+msgstr "La factorielle n'est définie que pour les entiers non-négatifs."
+
+#: calk/routes/main.py:92
+msgid "Factorial requires a whole number (integer)."
+msgstr "La factorielle nécessite un nombre entier."
+
+#: calk/routes/main.py:94
+msgid "Invalid logarithm base. Must be positive and not equal to 1."
+msgstr "Base de logarithme invalide. Doit être positive et non égale à 1."
+
+#: calk/routes/main.py:98
+msgid "Calculation error. Please check your input and try again."
+msgstr "Erreur de calcul. Veuillez vérifier votre entrée et réessayer."
+
+#: calk/templates/index.html:6 calk/templates/index.html:16
+msgid "Calculator"
+msgstr "Calculatrice"
+
+#: calk/templates/index.html:17
+msgid "Scientific"
+msgstr "Scientifique"
+
+#: calk/templates/index.html:24
+msgid "A"
+msgstr "A"
+
+#: calk/templates/index.html:29
+msgid "B"
+msgstr "B"
+
+#: calk/templates/index.html:38
+msgid "Basic"
+msgstr "Basique"
+
+#: calk/templates/index.html:39
+msgid "Engineering"
+msgstr "Ingénierie"
+
+#: calk/templates/index.html:44
+msgid "Basic mathematical operations"
+msgstr "Opérations mathématiques de base"
+
+#: calk/templates/index.html:45
+msgid "Add"
+msgstr "Ajouter"
+
+#: calk/templates/index.html:46
+msgid "Subtract"
+msgstr "Soustraire"
+
+#: calk/templates/index.html:47
+msgid "Multiply"
+msgstr "Multiplier"
+
+#: calk/templates/index.html:48
+msgid "Divide"
+msgstr "Diviser"
+
+#: calk/templates/index.html:49
+msgid "Square A"
+msgstr "Carré A"
+
+#: calk/templates/index.html:50
+msgid "Sqrt A"
+msgstr "Racine carrée A"
+
+#: calk/templates/index.html:51
+msgid "Reciprocal"
+msgstr "Réciproque"
+
+#: calk/templates/index.html:52
+msgid "Negate"
+msgstr "Négatif"
+
+#: calk/templates/index.html:57
+msgid "Scientific functions"
+msgstr "Fonctions scientifiques"
+
+#: calk/templates/index.html:58
+msgid "Sine"
+msgstr "Sinus"
+
+#: calk/templates/index.html:59
+msgid "Cosine"
+msgstr "Cosinus"
+
+#: calk/templates/index.html:60
+msgid "Tangent"
+msgstr "Tangente"
+
+#: calk/templates/index.html:61
+msgid "Log10"
+msgstr "Log10"
+
+#: calk/templates/index.html:62
+msgid "Natural Log"
+msgstr "Logarithme naturel"
+
+#: calk/templates/index.html:63
+msgid "Exponential"
+msgstr "Exponentielle"
+
+#: calk/templates/index.html:64
+msgid "Factorial"
+msgstr "Factorielle"
+
+#: calk/templates/index.html:65
+msgid "Percent"
+msgstr "Pourcentage"
+
+#: calk/templates/index.html:66
+msgid "Power"
+msgstr "Puissance"
+
+#: calk/templates/index.html:67
+msgid "Pi"
+msgstr "Pi"
+
+#: calk/templates/index.html:68
+msgid "Euler"
+msgstr "Euler"
+
+#: calk/templates/index.html:74
+msgid "Result"
+msgstr "Résultat"
+

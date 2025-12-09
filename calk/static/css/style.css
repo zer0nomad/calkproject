@@ -271,16 +271,17 @@ body {
 .toggle-switch {
   position: relative;
   display: inline-block;
-  width: 200px;
-  height: 50px;
+  width: 220px;
+  height: 56px;
   background: linear-gradient(180deg, var(--tan-dark) 0%, var(--button-dark) 100%);
   border: 3px solid var(--brown);
-  border-radius: 8px;
+  border-radius: 10px;
   box-shadow: 
-    inset 0 2px 4px rgba(255,255,255,0.3),
-    inset 0 -2px 4px rgba(0,0,0,0.3),
-    0 4px 8px rgba(0,0,0,0.5);
+    inset 0 2px 5px rgba(255,255,255,0.4),
+    inset 0 -3px 6px rgba(0,0,0,0.4),
+    0 5px 12px rgba(0,0,0,0.6);
   cursor: pointer;
+  padding: 4px;
 }
 
 .toggle-switch input {
@@ -289,24 +290,57 @@ body {
 
 .toggle-slider {
   position: absolute;
-  top: 3px;
-  left: 3px;
+  top: 4px;
+  left: 4px;
   right: auto;
-  width: 90px;
-  height: 40px;
-  background: linear-gradient(180deg, #d4af9a 0%, #c4a081 100%);
+  width: 102px;
+  height: 48px;
+  background: linear-gradient(135deg, #e8dcc8 0%, #d4af9a 50%, #c4a081 100%);
   border: 2px solid var(--brown);
-  border-radius: 4px;
-  transition: all 0.3s ease;
+  border-radius: 6px;
+  transition: all 0.35s cubic-bezier(0.23, 1, 0.320, 1);
   box-shadow: 
-    inset 0 2px 4px rgba(0,0,0,0.2),
-    inset 0 -1px 2px rgba(255,255,255,0.3),
-    0 3px 6px rgba(0,0,0,0.3);
+    inset 0 1px 3px rgba(255,255,255,0.5),
+    inset 0 -2px 4px rgba(0,0,0,0.25),
+    0 4px 8px rgba(0,0,0,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Courier New', monospace;
+  font-size: 0.65rem;
+  font-weight: 900;
+  color: var(--brown);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .toggle-switch input:checked + .toggle-slider {
   left: auto;
-  right: 3px;
+  right: 4px;
+}
+
+.toggle-slider::before {
+  content: 'BASIC';
+  position: absolute;
+  left: 4px;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+.toggle-switch input:checked + .toggle-slider::before {
+  opacity: 0;
+}
+
+.toggle-slider::after {
+  content: 'ENG';
+  position: absolute;
+  right: 4px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.toggle-switch input:checked + .toggle-slider::after {
+  opacity: 1;
 }
 
 .toggle-label {
@@ -314,18 +348,22 @@ body {
   top: 50%;
   transform: translateY(-50%);
   font-family: 'Courier New', monospace;
-  font-weight: 700;
-  font-size: 0.75rem;
-  color: var(--brown);
+  font-weight: 900;
+  font-size: 0.65rem;
+  color: rgba(107, 93, 82, 0.4);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  width: 90px;
+  letter-spacing: 0.08em;
+  width: 102px;
   text-align: center;
   pointer-events: none;
 }
 
 .toggle-label.basic-label {
-  left: 3px;
+  left: 4px;
+}
+
+.toggle-label.eng-label {
+  right: 4px;
 }
 
 .toggle-label.eng-label {
