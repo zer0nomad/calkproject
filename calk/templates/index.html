@@ -31,9 +31,13 @@
             </div>
           </div>
 
-          <div class="mode-toggle">
-            <button type="button" class="mode-btn active" onclick="toggleMode('basic')">{{ gettext('Basic') }}</button>
-            <button type="button" class="mode-btn" onclick="toggleMode('engineering')">{{ gettext('Engineering') }}</button>
+          <div class="toggle-container">
+            <label class="toggle-switch">
+              <input type="checkbox" id="mode-toggle" onchange="toggleMode(this.checked ? 'engineering' : 'basic')">
+              <span class="toggle-slider"></span>
+              <span class="toggle-label basic-label">{{ gettext('Basic') }}</span>
+              <span class="toggle-label eng-label">{{ gettext('Engineering') }}</span>
+            </label>
           </div>
 
           <fieldset class="ops" role="group" aria-label="Basic Operations">
@@ -82,18 +86,13 @@
         function toggleMode(mode) {
           const basicOps = document.querySelector('.ops');
           const engineeringSection = document.getElementById('engineering-section');
-          const buttons = document.querySelectorAll('.mode-btn');
-
-          buttons.forEach(btn => btn.classList.remove('active'));
 
           if (mode === 'engineering') {
             basicOps.style.display = 'none';
             engineeringSection.classList.add('active');
-            event.target.classList.add('active');
           } else {
             basicOps.style.display = 'grid';
             engineeringSection.classList.remove('active');
-            event.target.classList.add('active');
           }
         }
       </script>
