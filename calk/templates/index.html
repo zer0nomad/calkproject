@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ gettext('Calculator') }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='img/favicon.svg') }}">
+  </head>
+  <body>
+    <div class="wrap">
+      <main class="card" role="main">
+        <div class="header">
+          <div class="logo">C</div>
+          <div>
+            <div class="title">{{ gettext('Calculator') }}</div>
+            <div class="subtitle">{{ gettext('A lightweight example with i18n') }}</div>
+          </div>
+        </div>
+
+        <form method="post" novalidate>
+          <div class="grid">
+            <div class="field">
+              <label for="a">{{ gettext('A') }}</label>
+              <input id="a" name="a" type="number" step="any" inputmode="decimal" placeholder="0">
+            </div>
+
+            <div class="field">
+              <label for="b">{{ gettext('B') }}</label>
+              <input id="b" name="b" type="number" step="any" inputmode="decimal" placeholder="0">
+            </div>
+          </div>
+
+          <div class="ops" role="group" aria-label="Operations">
+            <button type="submit" name="operation" value="add">{{ gettext('Add') }}</button>
+            <button type="submit" name="operation" value="sub">{{ gettext('Subtract') }}</button>
+            <button type="submit" name="operation" value="mul">{{ gettext('Multiply') }}</button>
+            <button type="submit" name="operation" value="div">{{ gettext('Divide') }}</button>
+            <button type="submit" name="operation" value="square">{{ gettext('Square A') }}</button>
+            <button type="submit" name="operation" value="sqrt">{{ gettext('Sqrt A') }}</button>
+          </div>
+        </form>
+
+        {% if result is not none %}
+        <div class="display" role="status" aria-live="polite">
+          <div class="label">{{ gettext('Result') }}</div>
+          <div class="value">{{ result }}</div>
+        </div>
+        {% endif %}
+
+        {% if error %}
+        <div class="error" role="alert">{{ error }}</div>
+        {% endif %}
+      </main>
+    </div>
+  </body>
+</html>
