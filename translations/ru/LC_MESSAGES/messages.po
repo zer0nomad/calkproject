@@ -9,6 +9,9 @@ msgstr ""
 msgid "Calculator"
 msgstr "Калькулятор"
 
+msgid "Scientific"
+msgstr "Научный"
+
 msgid "A lightweight example with i18n"
 msgstr "Лёгкий пример с интернационализацией"
 
@@ -36,8 +39,59 @@ msgstr "Возвести A в квадрат"
 msgid "Sqrt A"
 msgstr "Квадратный корень A"
 
+msgid "Reciprocal"
+msgstr "Обратное число"
+
+msgid "Negate"
+msgstr "Изменить знак"
+
+msgid "Basic"
+msgstr "Основной"
+
+msgid "Engineering"
+msgstr "Инженерный"
+
+msgid "Sine"
+msgstr "Синус"
+
+msgid "Cosine"
+msgstr "Косинус"
+
+msgid "Tangent"
+msgstr "Тангенс"
+
+msgid "Log10"
+msgstr "Log10"
+
+msgid "Natural Log"
+msgstr "Натуральный логарифм"
+
+msgid "Exponential"
+msgstr "Экспонента"
+
+msgid "Factorial"
+msgstr "Факториал"
+
+msgid "Percent"
+msgstr "Процент"
+
+msgid "Power"
+msgstr "Степень"
+
+msgid "Pi"
+msgstr "Пи"
+
+msgid "Euler"
+msgstr "Число е"
+
 msgid "Mathematical operations"
 msgstr "Математические операции"
+
+msgid "Scientific functions"
+msgstr "Научные функции"
+
+msgid "Basic mathematical operations"
+msgstr "Основные математические операции"
 
 msgid "Result"
 msgstr "Результат"

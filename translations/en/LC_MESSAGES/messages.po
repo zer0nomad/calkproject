@@ -9,6 +9,9 @@ msgstr ""
 msgid "Calculator"
 msgstr "Calculator"
 
+msgid "Scientific"
+msgstr "Scientific"
+
 msgid "A lightweight example with i18n"
 msgstr "A lightweight example with i18n"
 
@@ -36,8 +39,59 @@ msgstr "Square A"
 msgid "Sqrt A"
 msgstr "Sqrt A"
 
+msgid "Reciprocal"
+msgstr "Reciprocal"
+
+msgid "Negate"
+msgstr "Negate"
+
+msgid "Basic"
+msgstr "Basic"
+
+msgid "Engineering"
+msgstr "Engineering"
+
+msgid "Sine"
+msgstr "Sine"
+
+msgid "Cosine"
+msgstr "Cosine"
+
+msgid "Tangent"
+msgstr "Tangent"
+
+msgid "Log10"
+msgstr "Log10"
+
+msgid "Natural Log"
+msgstr "Natural Log"
+
+msgid "Exponential"
+msgstr "Exponential"
+
+msgid "Factorial"
+msgstr "Factorial"
+
+msgid "Percent"
+msgstr "Percent"
+
+msgid "Power"
+msgstr "Power"
+
+msgid "Pi"
+msgstr "Pi"
+
+msgid "Euler"
+msgstr "Euler"
+
 msgid "Mathematical operations"
 msgstr "Mathematical operations"
+
+msgid "Scientific functions"
+msgstr "Scientific functions"
+
+msgid "Basic mathematical operations"
+msgstr "Basic mathematical operations"
 
 msgid "Result"
 msgstr "Result"

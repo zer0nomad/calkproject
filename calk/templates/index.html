@@ -14,7 +14,7 @@
           <div class="logo">C</div>
           <div>
             <h1 class="title">{{ gettext('Calculator') }}</h1>
-            <p class="subtitle">{{ gettext('A lightweight example with i18n') }}</p>
+            <p class="subtitle">{{ gettext('Scientific') }}</p>
           </div>
         </div>
 
@@ -31,15 +31,39 @@
             </div>
           </div>
 
-          <fieldset class="ops" role="group" aria-label="Operations">
-            <legend class="visually-hidden">{{ gettext('Mathematical operations') }}</legend>
+          <div class="mode-toggle">
+            <button type="button" class="mode-btn active" onclick="toggleMode('basic')">{{ gettext('Basic') }}</button>
+            <button type="button" class="mode-btn" onclick="toggleMode('engineering')">{{ gettext('Engineering') }}</button>
+          </div>
+
+          <fieldset class="ops" role="group" aria-label="Basic Operations">
+            <legend class="visually-hidden">{{ gettext('Basic mathematical operations') }}</legend>
             <button type="submit" name="operation" value="add" aria-label="{{ gettext('Add') }}" title="{{ gettext('Add') }}">+</button>
             <button type="submit" name="operation" value="sub" aria-label="{{ gettext('Subtract') }}" title="{{ gettext('Subtract') }}">−</button>
             <button type="submit" name="operation" value="mul" aria-label="{{ gettext('Multiply') }}" title="{{ gettext('Multiply') }}">×</button>
             <button type="submit" name="operation" value="div" aria-label="{{ gettext('Divide') }}" title="{{ gettext('Divide') }}">÷</button>
             <button type="submit" name="operation" value="square" aria-label="{{ gettext('Square A') }}" title="{{ gettext('Square A') }}">x²</button>
             <button type="submit" name="operation" value="sqrt" aria-label="{{ gettext('Sqrt A') }}" title="{{ gettext('Sqrt A') }}">√</button>
+            <button type="submit" name="operation" value="reciprocal" aria-label="{{ gettext('Reciprocal') }}" title="{{ gettext('Reciprocal') }}">1/x</button>
+            <button type="submit" name="operation" value="negate" aria-label="{{ gettext('Negate') }}" title="{{ gettext('Negate') }}">+/−</button>
           </fieldset>
+
+          <div class="engineering-section" id="engineering-section">
+            <fieldset class="engineering-ops" role="group" aria-label="Engineering Functions">
+              <legend class="visually-hidden">{{ gettext('Scientific functions') }}</legend>
+              <button type="submit" name="operation" value="sin" aria-label="{{ gettext('Sine') }}" title="{{ gettext('Sine') }}">sin</button>
+              <button type="submit" name="operation" value="cos" aria-label="{{ gettext('Cosine') }}" title="{{ gettext('Cosine') }}">cos</button>
+              <button type="submit" name="operation" value="tan" aria-label="{{ gettext('Tangent') }}" title="{{ gettext('Tangent') }}">tan</button>
+              <button type="submit" name="operation" value="log" aria-label="{{ gettext('Log10') }}" title="{{ gettext('Log10') }}">log</button>
+              <button type="submit" name="operation" value="ln" aria-label="{{ gettext('Natural Log') }}" title="{{ gettext('Natural Log') }}">ln</button>
+              <button type="submit" name="operation" value="exp" aria-label="{{ gettext('Exponential') }}" title="{{ gettext('Exponential') }}">eˣ</button>
+              <button type="submit" name="operation" value="factorial" aria-label="{{ gettext('Factorial') }}" title="{{ gettext('Factorial') }}">n!</button>
+              <button type="submit" name="operation" value="percent" aria-label="{{ gettext('Percent') }}" title="{{ gettext('Percent') }}">%</button>
+              <button type="submit" name="operation" value="power" aria-label="{{ gettext('Power') }}" title="{{ gettext('Power') }}">aˣ</button>
+              <button type="submit" name="operation" value="pi" aria-label="{{ gettext('Pi') }}" title="{{ gettext('Pi') }}">π</button>
+              <button type="submit" name="operation" value="e" aria-label="{{ gettext('Euler') }}" title="{{ gettext('Euler') }}">e</button>
+            </fieldset>
+          </div>
         </form>
 
         {% if result is not none %}
@@ -53,6 +77,26 @@
         <div class="error" role="alert" aria-live="assertive">{{ error }}</div>
         {% endif %}
       </main>
+
+      <script>
+        function toggleMode(mode) {
+          const basicOps = document.querySelector('.ops');
+          const engineeringSection = document.getElementById('engineering-section');
+          const buttons = document.querySelectorAll('.mode-btn');
+
+          buttons.forEach(btn => btn.classList.remove('active'));
+
+          if (mode === 'engineering') {
+            basicOps.style.display = 'none';
+            engineeringSection.classList.add('active');
+            event.target.classList.add('active');
+          } else {
+            basicOps.style.display = 'grid';
+            engineeringSection.classList.remove('active');
+            event.target.classList.add('active');
+          }
+        }
+      </script>
     </div>
   </body>
 </html>
