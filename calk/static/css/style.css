@@ -264,32 +264,51 @@ body {
 
 .mode-toggle {
   display: flex;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
+  gap: 0.25rem;
+  margin-bottom: 1.5rem;
   justify-content: center;
+  background: linear-gradient(180deg, var(--tan-dark) 0%, var(--button-dark) 100%);
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 3px solid var(--brown);
+  box-shadow: 
+    inset 0 2px 4px rgba(255,255,255,0.3),
+    inset 0 -2px 4px rgba(0,0,0,0.3),
+    0 4px 8px rgba(0,0,0,0.5);
 }
 
 .mode-toggle button {
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1.2rem;
   border: 2px solid var(--brown);
-  background: linear-gradient(180deg, var(--button-light) 0%, var(--button-dark) 100%);
+  background: linear-gradient(180deg, #bfa08a 0%, #9a8875 100%);
   color: var(--brown);
   border-radius: 4px;
   font-weight: 700;
   cursor: pointer;
   font-family: 'Courier New', monospace;
   font-size: 0.8rem;
-  transition: all 0.1s ease;
+  transition: all 0.15s ease;
+  box-shadow: 
+    0 3px 5px rgba(0,0,0,0.3),
+    inset 0 1px 0 rgba(255,255,255,0.3);
+  flex: 1;
 }
 
 .mode-toggle button.active {
-  background: linear-gradient(180deg, var(--lcd-text), var(--lcd-bg));
-  color: var(--lcd-bg);
-  box-shadow: 0 0 8px rgba(0,255,65,0.5);
+  background: linear-gradient(180deg, #d4af9a 0%, #c4a081 100%);
+  color: var(--brown);
+  box-shadow: 
+    inset 0 3px 6px rgba(0,0,0,0.3),
+    inset 0 -1px 0 rgba(255,255,255,0.5),
+    0 1px 2px rgba(0,0,0,0.2);
+  transform: translateY(1px);
 }
 
-.mode-toggle button:hover {
+.mode-toggle button:hover:not(.active) {
   transform: translateY(-1px);
+  box-shadow: 
+    0 4px 8px rgba(0,0,0,0.4),
+    inset 0 1px 0 rgba(255,255,255,0.3);
 }
 
 .engineering-section {

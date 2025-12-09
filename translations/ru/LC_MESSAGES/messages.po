@@ -105,8 +105,23 @@ msgstr "Неверный ввод B"
 msgid "Unknown operation"
 msgstr "Неизвестная операция"
 
-msgid "Division by zero is not allowed"
-msgstr "Деление на ноль недопустимо"
+msgid "Cannot divide by zero. Please check your values."
+msgstr "Невозможно делить на ноль. Пожалуйста, проверьте значения."
 
-msgid "Calculation error"
-msgstr "Ошибка вычисления"
+msgid "Cannot take square root of a negative number."
+msgstr "Невозможно извлечь квадратный корень из отрицательного числа."
+
+msgid "Logarithm is only defined for positive numbers."
+msgstr "Логарифм определен только для положительных чисел."
+
+msgid "Factorial is only defined for non-negative integers."
+msgstr "Факториал определен только для неотрицательных целых чисел."
+
+msgid "Factorial requires a whole number (integer)."
+msgstr "Факториал требует целого числа (целого числа)."
+
+msgid "Invalid logarithm base. Must be positive and not equal to 1."
+msgstr "Неверное основание логарифма. Должно быть положительным и не равным 1."
+
+msgid "Calculation error. Please check your input and try again."
+msgstr "Ошибка вычисления. Пожалуйста, проверьте ввод и попробуйте снова."

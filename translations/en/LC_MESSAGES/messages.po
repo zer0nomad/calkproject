@@ -105,8 +105,23 @@ msgstr "Invalid input for B"
 msgid "Unknown operation"
 msgstr "Unknown operation"
 
-msgid "Division by zero is not allowed"
-msgstr "Division by zero is not allowed"
+msgid "Cannot divide by zero. Please check your values."
+msgstr "Cannot divide by zero. Please check your values."
 
-msgid "Calculation error"
-msgstr "Calculation error"
+msgid "Cannot take square root of a negative number."
+msgstr "Cannot take square root of a negative number."
+
+msgid "Logarithm is only defined for positive numbers."
+msgstr "Logarithm is only defined for positive numbers."
+
+msgid "Factorial is only defined for non-negative integers."
+msgstr "Factorial is only defined for non-negative integers."
+
+msgid "Factorial requires a whole number (integer)."
+msgstr "Factorial requires a whole number (integer)."
+
+msgid "Invalid logarithm base. Must be positive and not equal to 1."
+msgstr "Invalid logarithm base. Must be positive and not equal to 1."
+
+msgid "Calculation error. Please check your input and try again."
+msgstr "Calculation error. Please check your input and try again."

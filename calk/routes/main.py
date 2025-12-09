@@ -78,10 +78,23 @@ def index():
             else:
                 error = gettext('Unknown operation')
         except svc.DivisionByZeroError:
-            error = gettext('Division by zero is not allowed')
+            error = gettext('Cannot divide by zero. Please check your values.')
         except svc.CalculatorError as e:
-            error = str(e)
+            # Translate specific error messages
+            error_msg = str(e)
+            if 'sqrt of negative' in error_msg:
+                error = gettext('Cannot take square root of a negative number.')
+            elif 'logarithm of non-positive' in error_msg:
+                error = gettext('Logarithm is only defined for positive numbers.')
+            elif 'factorial of negative' in error_msg:
+                error = gettext('Factorial is only defined for non-negative integers.')
+            elif 'factorial of non-integer' in error_msg:
+                error = gettext('Factorial requires a whole number (integer).')
+            elif 'invalid logarithm base' in error_msg:
+                error = gettext('Invalid logarithm base. Must be positive and not equal to 1.')
+            else:
+                error = str(e)
         except Exception:
-            error = gettext('Calculation error')
+            error = gettext('Calculation error. Please check your input and try again.')
 
     return render_template('index.html', result=result, error=error)
