@@ -9,6 +9,17 @@
   </head>
   <body>
     <div class="wrap">
+      <header class="lang-selector">
+        <select id="language-select" onchange="changeLanguage(this.value)">
+          <option value="en" {% if request.accept_languages.best_match(['en', 'ru', 'fr', 'de', 'es', 'it', 'zh']) == 'en' %}selected{% endif %}>English</option>
+          <option value="ru" {% if request.accept_languages.best_match(['en', 'ru', 'fr', 'de', 'es', 'it', 'zh']) == 'ru' %}selected{% endif %}>Русский</option>
+          <option value="fr" {% if request.accept_languages.best_match(['en', 'ru', 'fr', 'de', 'es', 'it', 'zh']) == 'fr' %}selected{% endif %}>Français</option>
+          <option value="de" {% if request.accept_languages.best_match(['en', 'ru', 'fr', 'de', 'es', 'it', 'zh']) == 'de' %}selected{% endif %}>Deutsch</option>
+          <option value="es" {% if request.accept_languages.best_match(['en', 'ru', 'fr', 'de', 'es', 'it', 'zh']) == 'es' %}selected{% endif %}>Español</option>
+          <option value="it" {% if request.accept_languages.best_match(['en', 'ru', 'fr', 'de', 'es', 'it', 'zh']) == 'it' %}selected{% endif %}>Italiano</option>
+          <option value="zh" {% if request.accept_languages.best_match(['en', 'ru', 'fr', 'de', 'es', 'it', 'zh']) == 'zh' %}selected{% endif %}>中文</option>
+        </select>
+      </header>
       <main class="card" role="main">
         <div class="header">
           <div class="logo">C</div>
@@ -31,13 +42,9 @@
             </div>
           </div>
 
-          <div class="toggle-container">
-            <label class="toggle-switch">
-              <input type="checkbox" id="mode-toggle" onchange="toggleMode(this.checked ? 'engineering' : 'basic')">
-              <span class="toggle-slider"></span>
-              <span class="toggle-label basic-label">{{ gettext('Basic') }}</span>
-              <span class="toggle-label eng-label">{{ gettext('Engineering') }}</span>
-            </label>
+          <div class="mode-buttons">
+            <button type="button" class="mode-btn basic-btn active" onclick="toggleMode('basic')">{{ gettext('Basic') }}</button>
+            <button type="button" class="mode-btn eng-btn" onclick="toggleMode('engineering')">{{ gettext('Engineering') }}</button>
           </div>
 
           <fieldset class="ops" role="group" aria-label="Basic Operations">
@@ -90,14 +97,24 @@
         function toggleMode(mode) {
           const basicOps = document.querySelector('.ops');
           const engineeringSection = document.getElementById('engineering-section');
+          const basicBtn = document.querySelector('.basic-btn');
+          const engBtn = document.querySelector('.eng-btn');
 
           if (mode === 'engineering') {
             basicOps.style.display = 'none';
             engineeringSection.classList.add('active');
+            basicBtn.classList.remove('active');
+            engBtn.classList.add('active');
           } else {
             basicOps.style.display = 'grid';
             engineeringSection.classList.remove('active');
+            basicBtn.classList.add('active');
+            engBtn.classList.remove('active');
           }
+        }
+
+        function changeLanguage(lang) {
+          window.location.href = '/?lang=' + lang;
         }
       </script>
     </div>

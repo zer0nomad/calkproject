@@ -1,5 +1,5 @@
-from flask import Blueprint, render_template, request
-from flask_babel import gettext
+from flask import Blueprint, render_template, request, redirect, url_for
+from flask_babel import gettext, get_locale
 
 from ..services import calculator_service as svc
 
@@ -8,6 +8,12 @@ main_bp = Blueprint('main', __name__)
 
 @main_bp.route('/', methods=['GET', 'POST'])
 def index():
+    # Handle language selection
+    lang = request.args.get('lang')
+    if lang:
+        response = redirect(url_for('main.index'))
+        response.set_cookie('lang', lang, max_age=60*60*24*365)
+        return response
     result = None
     error = None
     op = None

@@ -1,7 +1,16 @@
-from flask import Flask
+from flask import Flask, request
 from flask_babel import Babel, gettext
 
 babel = Babel()
+
+
+def get_locale():
+    # Check cookie first
+    lang = request.cookies.get('lang')
+    if lang in ['en', 'ru', 'fr', 'de', 'es', 'it', 'zh']:
+        return lang
+    # Then check Accept-Language header
+    return request.accept_languages.best_match(['en', 'ru', 'fr', 'de', 'es', 'it', 'zh']) or 'en'
 
 
 def create_app(config_object=None):
@@ -16,6 +25,7 @@ def create_app(config_object=None):
 
     # Initialize extensions
     babel.init_app(app)
+    babel.locale_selector_func = get_locale
 
     # expose gettext in templates as `gettext` (explicit usage in templates)
     app.jinja_env.globals['gettext'] = gettext
