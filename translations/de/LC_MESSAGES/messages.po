@@ -58,6 +58,15 @@ msgstr "Ungültige Logarithmenbasis. Muss positiv und nicht gleich 1 sein."
 msgid "Calculation error. Please check your input and try again."
 msgstr "Rechenfehler. Bitte überprüfen Sie Ihre Eingabe und versuchen Sie es erneut."
 
+msgid "Welcome to Calculator"
+msgstr "Willkommen beim Rechner"
+
+msgid "Select a language in the top-right corner, enter two numbers, choose an operation, and click the button to calculate."
+msgstr "Wählen Sie eine Sprache in der oberen rechten Ecke, geben Sie zwei Zahlen ein, wählen Sie eine Operation und klicken Sie auf die Schaltfläche zum Berechnen."
+
+msgid "Close"
+msgstr "Schließen"
+
 #: calk/templates/index.html:6 calk/templates/index.html:16
 msgid "Calculator"
 msgstr "Rechner"

@@ -170,3 +170,12 @@ msgstr "Euler"
 msgid "Result"
 msgstr "Risultato"
 
+msgid "Welcome to Calculator"
+msgstr "Benvenuti in Calcolatrice"
+
+msgid "Select a language in the top-right corner, enter two numbers, choose an operation, and click the button to calculate."
+msgstr "Seleziona una lingua nell'angolo in alto a destra, inserisci due numeri, scegli un'operazione e fai clic sul pulsante per calcolare."
+
+msgid "Close"
+msgstr "Chiudi"
+

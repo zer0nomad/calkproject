@@ -170,3 +170,12 @@ msgstr "欧拉数"
 msgid "Result"
 msgstr "结果"
 
+msgid "Welcome to Calculator"
+msgstr "欢迎来到计算器"
+
+msgid "Select a language in the top-right corner, enter two numbers, choose an operation, and click the button to calculate."
+msgstr "在右上角选择语言，输入两个数字，选择一个操作，然后单击按钮进行计算。"
+
+msgid "Close"
+msgstr "关闭"
+

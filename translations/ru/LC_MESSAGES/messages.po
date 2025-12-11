@@ -12,9 +12,6 @@ msgstr "Калькулятор"
 msgid "Scientific"
 msgstr "Научный"
 
-msgid "A lightweight example with i18n"
-msgstr "Лёгкий пример с интернационализацией"
-
 msgid "A"
 msgstr "А"
 
@@ -84,9 +81,6 @@ msgstr "Пи"
 msgid "Euler"
 msgstr "Число е"
 
-msgid "Mathematical operations"
-msgstr "Математические операции"
-
 msgid "Scientific functions"
 msgstr "Научные функции"
 
@@ -125,3 +119,12 @@ msgstr "Неверное основание логарифма. Должно б�
 
 msgid "Calculation error. Please check your input and try again."
 msgstr "Ошибка вычисления. Пожалуйста, проверьте ввод и попробуйте снова."
+
+msgid "Welcome to Calculator"
+msgstr "Добро пожаловать в Калькулятор"
+
+msgid "Select a language in the top-right corner, enter two numbers, choose an operation, and click the button to calculate."
+msgstr "Выберите язык в верхнем правом углу, введите два числа, выберите операцию и нажмите кнопку для вычисления."
+
+msgid "Close"
+msgstr "Закрыть"

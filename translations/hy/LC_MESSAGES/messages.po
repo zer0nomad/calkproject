@@ -1,4 +1,4 @@
-# French translations for PROJECT.
+# Armenian translations for PROJECT.
 # Copyright (C) 2025 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
@@ -8,11 +8,11 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-12-09 12:27+0000\n"
-"PO-Revision-Date: 2025-12-09 12:27+0000\n"
+"PO-Revision-Date: 2025-12-09 12:39+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: fr\n"
-"Language-Team: fr <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: hy\n"
+"Language-Team: hy <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,60 +20,60 @@ msgstr ""
 
 #: calk/routes/main.py:24
 msgid "Invalid input for A"
-msgstr "Entrée invalide pour A"
+msgstr "A-ի համար սխալ մուտք"
 
 #: calk/routes/main.py:30
 msgid "Invalid input for B"
-msgstr "Entrée invalide pour B"
+msgstr "B-ի համար սխալ մուտք"
 
 #: calk/routes/main.py:79
 msgid "Unknown operation"
-msgstr "Opération inconnue"
+msgstr "Անհայտ գործողություն"
 
 #: calk/routes/main.py:81
 msgid "Cannot divide by zero. Please check your values."
-msgstr "Impossible de diviser par zéro. Veuillez vérifier vos valeurs."
+msgstr "Չի կարող բաժանվել զրոյի վրա: Խնդրում ենք ստուգել ձեր արժեքները:"
 
 #: calk/routes/main.py:86
 msgid "Cannot take square root of a negative number."
-msgstr "Impossible de prendre la racine carrée d'un nombre négatif."
+msgstr "Չի կարող բացասական թվի քառակուսի արմատ վերցնել:"
 
 #: calk/routes/main.py:88
 msgid "Logarithm is only defined for positive numbers."
-msgstr "Le logarithme n'est défini que pour les nombres positifs."
+msgstr "Լոգարիթմը սահմանվում է միայն դրական թվերի համար:"
 
 #: calk/routes/main.py:90
 msgid "Factorial is only defined for non-negative integers."
-msgstr "La factorielle n'est définie que pour les entiers non-négatifs."
+msgstr "Ֆակտորիալը սահմանվում է միայն ոչ բացասական ամբողջ թվերի համար:"
 
 #: calk/routes/main.py:92
 msgid "Factorial requires a whole number (integer)."
-msgstr "La factorielle nécessite un nombre entier."
+msgstr "Ֆակտորիալը պահանջում է ամբողջ թիվ:"
 
 #: calk/routes/main.py:94
 msgid "Invalid logarithm base. Must be positive and not equal to 1."
-msgstr "Base de logarithme invalide. Doit être positive et non égale à 1."
+msgstr "Սխալ լոգարիթմի բազա: Դրական պետք է լինի և հավասար չլինել 1-ի:"
 
 #: calk/routes/main.py:98
 msgid "Calculation error. Please check your input and try again."
-msgstr "Erreur de calcul. Veuillez vérifier votre saisie et réessayer."
+msgstr "Հաշվարկման սխալ: Խնդրում ենք ստուգել ձեր մուտքը և կրկին փորձել:"
 
 msgid "Welcome to Calculator"
-msgstr "Bienvenue à la Calculatrice"
+msgstr "Բարի գալուստ հաշվիչ"
 
 msgid "Select a language in the top-right corner, enter two numbers, choose an operation, and click the button to calculate."
-msgstr "Sélectionnez une langue dans le coin supérieur droit, entrez deux nombres, choisissez une opération et cliquez sur le bouton pour calculer."
+msgstr "Ընտրեք լեզու վերին աջ անկյունում, մուտքագրեք երկու թիվ, ընտրեք գործողություն և կրտնի հաշվարկի համար պահեք:"
 
 msgid "Close"
-msgstr "Fermer"
+msgstr "Փակել"
 
 #: calk/templates/index.html:6 calk/templates/index.html:16
 msgid "Calculator"
-msgstr "Calculatrice"
+msgstr "Հաշվիչ"
 
 #: calk/templates/index.html:17
 msgid "Scientific"
-msgstr "Scientifique"
+msgstr "Գիտական"
 
 #: calk/templates/index.html:24
 msgid "A"
@@ -85,63 +85,63 @@ msgstr "B"
 
 #: calk/templates/index.html:38
 msgid "Basic"
-msgstr "Basique"
+msgstr "Հիմնական"
 
 #: calk/templates/index.html:39
 msgid "Engineering"
-msgstr "Ingénierie"
+msgstr "Ինժեներական"
 
 #: calk/templates/index.html:44
 msgid "Basic mathematical operations"
-msgstr "Opérations mathématiques de base"
+msgstr "Հիմնական մաթեմատիկական գործողություններ"
 
 #: calk/templates/index.html:45
 msgid "Add"
-msgstr "Ajouter"
+msgstr "Ավելացնել"
 
 #: calk/templates/index.html:46
 msgid "Subtract"
-msgstr "Soustraire"
+msgstr "Հանել"
 
 #: calk/templates/index.html:47
 msgid "Multiply"
-msgstr "Multiplier"
+msgstr "Բազմապատկել"
 
 #: calk/templates/index.html:48
 msgid "Divide"
-msgstr "Diviser"
+msgstr "Բաժանել"
 
 #: calk/templates/index.html:49
 msgid "Square A"
-msgstr "Carré A"
+msgstr "A-ի քառակուսի"
 
 #: calk/templates/index.html:50
 msgid "Sqrt A"
-msgstr "Racine carrée A"
+msgstr "A-ի քառակուսի արմատ"
 
 #: calk/templates/index.html:51
 msgid "Reciprocal"
-msgstr "Réciproque"
+msgstr "Փոխադարձ"
 
 #: calk/templates/index.html:52
 msgid "Negate"
-msgstr "Négatif"
+msgstr "Հերքել"
 
 #: calk/templates/index.html:57
 msgid "Scientific functions"
-msgstr "Fonctions scientifiques"
+msgstr "Գիտական ֆունկցիաներ"
 
 #: calk/templates/index.html:58
 msgid "Sine"
-msgstr "Sinus"
+msgstr "Սինուս"
 
 #: calk/templates/index.html:59
 msgid "Cosine"
-msgstr "Cosinus"
+msgstr "Կոսինուս"
 
 #: calk/templates/index.html:60
 msgid "Tangent"
-msgstr "Tangente"
+msgstr "Տանգեն"
 
 #: calk/templates/index.html:61
 msgid "Log10"
@@ -149,33 +149,42 @@ msgstr "Log10"
 
 #: calk/templates/index.html:62
 msgid "Natural Log"
-msgstr "Logarithme naturel"
+msgstr "Բնական լոգարիթմ"
 
 #: calk/templates/index.html:63
 msgid "Exponential"
-msgstr "Exponentielle"
+msgstr "Էքսպոնենցիալ"
 
 #: calk/templates/index.html:64
 msgid "Factorial"
-msgstr "Factorielle"
+msgstr "Ֆակտորիալ"
 
 #: calk/templates/index.html:65
 msgid "Percent"
-msgstr "Pourcentage"
+msgstr "Տոկոս"
 
 #: calk/templates/index.html:66
 msgid "Power"
-msgstr "Puissance"
+msgstr "Ուժ"
 
 #: calk/templates/index.html:67
 msgid "Pi"
-msgstr "Pi"
+msgstr "Պի"
 
 #: calk/templates/index.html:68
 msgid "Euler"
-msgstr "Euler"
+msgstr "Էյլեր"
 
 #: calk/templates/index.html:74
 msgid "Result"
-msgstr "Résultat"
+msgstr "Արդյունք"
+
+msgid "Welcome to Calculator"
+msgstr "Բարի գալուստ հաշվիչ"
+
+msgid "Select a language in the top-right corner, enter two numbers, choose an operation, and click the button to calculate."
+msgstr "Ընտրեք լեզու վերին աջ անկյունում, մուտքագրեք երկու թիվ, ընտրեք գործողություն և կրտեք հաշվիչի համար պահեք:"
+
+msgid "Close"
+msgstr "Քակել"
 

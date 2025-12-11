@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- current_lang={{ current_lang }} -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ gettext('Calculator') }}</title>
@@ -8,16 +9,27 @@
     <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='img/favicon.svg') }}">
   </head>
   <body>
+    <!-- Welcome Tooltip -->
+    <div id="welcome-tooltip" class="welcome-tooltip" style="{% if force_tooltip %}display: flex !important;{% endif %}">
+      <div class="tooltip-content">
+        <h3>{{ gettext('Welcome to Calculator') }}</h3>
+        <p>{{ gettext('Select a language in the top-right corner, enter two numbers, choose an operation, and click the button to calculate.') }}</p>
+        <button id="close-tooltip" class="tooltip-close" aria-label="{{ gettext('Close') }}">×</button>
+      </div>
+    </div>
+    
     <div class="wrap">
       <header class="lang-selector">
         <select id="language-select" onchange="changeLanguage(this.value)">
-          <option value="en" {% if request.accept_languages.best_match(['en', 'ru', 'fr', 'de', 'es', 'it', 'zh']) == 'en' %}selected{% endif %}>English</option>
-          <option value="ru" {% if request.accept_languages.best_match(['en', 'ru', 'fr', 'de', 'es', 'it', 'zh']) == 'ru' %}selected{% endif %}>Русский</option>
-          <option value="fr" {% if request.accept_languages.best_match(['en', 'ru', 'fr', 'de', 'es', 'it', 'zh']) == 'fr' %}selected{% endif %}>Français</option>
-          <option value="de" {% if request.accept_languages.best_match(['en', 'ru', 'fr', 'de', 'es', 'it', 'zh']) == 'de' %}selected{% endif %}>Deutsch</option>
-          <option value="es" {% if request.accept_languages.best_match(['en', 'ru', 'fr', 'de', 'es', 'it', 'zh']) == 'es' %}selected{% endif %}>Español</option>
-          <option value="it" {% if request.accept_languages.best_match(['en', 'ru', 'fr', 'de', 'es', 'it', 'zh']) == 'it' %}selected{% endif %}>Italiano</option>
-          <option value="zh" {% if request.accept_languages.best_match(['en', 'ru', 'fr', 'de', 'es', 'it', 'zh']) == 'zh' %}selected{% endif %}>中文</option>
+          <option value="en" {% if current_lang == 'en' %}selected{% endif %}>🇬🇧 English</option>
+          <option value="ru" {% if current_lang == 'ru' %}selected{% endif %}>🇷🇺 Русский</option>
+          <option value="fr" {% if current_lang == 'fr' %}selected{% endif %}>🇫🇷 Français</option>
+          <option value="de" {% if current_lang == 'de' %}selected{% endif %}>🇩🇪 Deutsch</option>
+          <option value="es" {% if current_lang == 'es' %}selected{% endif %}>🇪🇸 Español</option>
+          <option value="it" {% if current_lang == 'it' %}selected{% endif %}>🇮🇹 Italiano</option>
+          <option value="zh" {% if current_lang == 'zh' %}selected{% endif %}>🇨🇳 中文</option>
+          <option value="ka" {% if current_lang == 'ka' %}selected{% endif %}>🇬🇪 ქართული</option>
+          <option value="hy" {% if current_lang == 'hy' %}selected{% endif %}>🇦🇲 Հայերեն</option>
         </select>
       </header>
       <main class="card" role="main">
@@ -94,6 +106,28 @@
       </main>
 
       <script>
+        const flagMap = {
+          'en': '🇬🇧',
+          'ru': '🇷🇺',
+          'fr': '🇫🇷',
+          'de': '🇩🇪',
+          'es': '🇪🇸',
+          'it': '🇮🇹',
+          'zh': '🇨🇳',
+          'ka': '🇬🇪',
+          'hy': '🇦🇲'
+        };
+
+        function updateFlagDisplay() {
+          const select = document.getElementById('language-select');
+          const flag = document.getElementById('lang-flag');
+          const selectedLang = select.value;
+          flag.textContent = flagMap[selectedLang] || '🌐';
+        }
+
+        // Update flag on page load
+        document.addEventListener('DOMContentLoaded', updateFlagDisplay);
+
         function toggleMode(mode) {
           const basicOps = document.querySelector('.ops');
           const engineeringSection = document.getElementById('engineering-section');
@@ -114,8 +148,46 @@
         }
 
         function changeLanguage(lang) {
-          window.location.href = '/?lang=' + lang;
+          // Set cookie with proper format and reload page
+          const date = new Date();
+          date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000));
+          document.cookie = "lang=" + lang + "; expires=" + date.toUTCString() + "; path=/";
+          window.location.href = '/';
         }
+        
+        // Tooltip management
+        document.addEventListener('DOMContentLoaded', function() {
+          const tooltip = document.getElementById('welcome-tooltip');
+          const closeButton = document.getElementById('close-tooltip');
+          
+          // Check if tooltip is forced to show (for debug)
+          const isForceShow = tooltip.style.display === 'flex';
+          
+          // Check if user has seen tooltip before
+          if (!isForceShow && !localStorage.getItem('tooltipShown')) {
+            tooltip.style.display = 'flex';
+            localStorage.setItem('tooltipShown', 'true');
+          } else if (!isForceShow) {
+            tooltip.style.display = 'none';
+          }
+          
+          // Close button functionality
+          if (closeButton) {
+            closeButton.addEventListener('click', function() {
+              tooltip.style.display = 'none';
+              // Also mark as shown if this is debug tooltip
+              localStorage.setItem('tooltipShown', 'true');
+            });
+          }
+          
+          // Close tooltip when clicking outside
+          document.addEventListener('click', function(event) {
+            if (!tooltip.contains(event.target) && tooltip.style.display === 'flex') {
+              tooltip.style.display = 'none';
+              localStorage.setItem('tooltipShown', 'true');
+            }
+          });
+        });
       </script>
     </div>
   </body>

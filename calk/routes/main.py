@@ -6,14 +6,26 @@ from ..services import calculator_service as svc
 main_bp = Blueprint('main', __name__)
 
 
+@main_bp.route('/debug/tooltip', methods=['GET'])
+def debug_tooltip():
+    """Debug endpoint to show tooltip - always displays it regardless of localStorage"""
+    current_locale = str(get_locale())
+    # Force tooltip to show by passing a flag
+    return render_template('index.html', result=None, error=None, current_lang=current_locale, force_tooltip=True)
+
+
 @main_bp.route('/', methods=['GET', 'POST'])
 def index():
     # Handle language selection
     lang = request.args.get('lang')
-    if lang:
+    if lang and lang in ['en', 'ru', 'fr', 'de', 'es', 'it', 'zh', 'ka', 'hy']:
         response = redirect(url_for('main.index'))
-        response.set_cookie('lang', lang, max_age=60*60*24*365)
+        response.set_cookie('lang', lang, max_age=60*60*24*365, path='/')
         return response
+    
+    # Get current locale at the start and convert to string
+    current_locale = str(get_locale())
+    
     result = None
     error = None
     op = None
@@ -28,13 +40,13 @@ def index():
             a = float(a_raw) if a_raw != '' else 0.0
         except ValueError:
             error = gettext('Invalid input for A')
-            return render_template('index.html', result=result, error=error)
+            return render_template('index.html', result=result, error=error, current_lang=current_locale)
 
         try:
             b = float(b_raw) if b_raw != '' else 0.0
         except ValueError:
             error = gettext('Invalid input for B')
-            return render_template('index.html', result=result, error=error)
+            return render_template('index.html', result=result, error=error, current_lang=current_locale)
 
         try:
             # Basic operations
@@ -103,4 +115,4 @@ def index():
         except Exception:
             error = gettext('Calculation error. Please check your input and try again.')
 
-    return render_template('index.html', result=result, error=error)
+    return render_template('index.html', result=result, error=error, current_lang=current_locale)

@@ -12,9 +12,6 @@ msgstr "Calculator"
 msgid "Scientific"
 msgstr "Scientific"
 
-msgid "A lightweight example with i18n"
-msgstr "A lightweight example with i18n"
-
 msgid "A"
 msgstr "A"
 
@@ -84,9 +81,6 @@ msgstr "Pi"
 msgid "Euler"
 msgstr "Euler"
 
-msgid "Mathematical operations"
-msgstr "Mathematical operations"
-
 msgid "Scientific functions"
 msgstr "Scientific functions"
 
@@ -125,3 +119,12 @@ msgstr "Invalid logarithm base. Must be positive and not equal to 1."
 
 msgid "Calculation error. Please check your input and try again."
 msgstr "Calculation error. Please check your input and try again."
+
+msgid "Welcome to Calculator"
+msgstr "Welcome to Calculator"
+
+msgid "Select a language in the top-right corner, enter two numbers, choose an operation, and click the button to calculate."
+msgstr "Select a language in the top-right corner, enter two numbers, choose an operation, and click the button to calculate."
+
+msgid "Close"
+msgstr "Close"
