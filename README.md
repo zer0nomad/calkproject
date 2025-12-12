@@ -4,6 +4,7 @@
 - **Application Factory** для управления конфигурацией
 - **Service Layer** для отделения бизнес-логики от Flask
 - **TDD** с полным покрытием тестами (27 тестов)
+ - **TDD** и широкая автоматизация тестирования (≈289 тестов, coverage ≈90%)
 - **i18n** с поддержкой 9 языков (en, ru, fr, de, es, it, zh, ka, hy)
 - **Retro UI** в стиле Elektronika MK-85 (80-е годы)
 
@@ -52,9 +53,8 @@ calkproject/
 │   └── hy/LC_MESSAGES/                # Армянский
 │       ├── messages.po
 │       └── messages.mo
-├── tests/                             # Unit и интеграционные тесты
-│   ├── test_calculator_service.py     # Тесты бизнес-логики (21 тест)
-│   └── test_app.py                    # Тесты Flask приложения (6 тестов)
+├── tests/                             # Тесты: unit, integration, accessibility,
+│                                     # performance и security (см. каталог `tests/`)
 ├── run.py                             # Точка входа (запуск сервера)
 └── requirements.txt                   # Зависимости Python
 ```
@@ -229,70 +229,23 @@ pybabel compile -d translations
 
 ## Тестирование
 
-### Полный список тестов (27 шт.)
+Проект покрыт широким набором автоматизированных тестов (~289 тестов), разделённых по категориям:
 
-#### Интеграционные и UI тесты (6)
+- Unit: тесты бизнес-логики в `tests/` (файл(ы) `test_calculator_service.py` и расширенные случаи).
+- Integration/UI: тесты Flask endpoints и шаблонов (`tests/test_app*.py`).
+- Accessibility: комплексные проверки доступности (в каталоге `tests/test_accessibility/`).
+- Performance: нагрузочные/производительные тесты (в каталоге `tests/test_performance/`).
+- Security: тесты защиты и валидации ввода (в `tests/test_security/`).
+- Edge cases: дополнительные сценарии и граничные условия (`tests/test_edge_cases*.py`).
 
-```
-test_app.py::test_index_get                      ✓ Проверка загрузки главной страницы
-test_app.py::test_add_operation                  ✓ Проверка операции сложения через форму
-test_app.py::test_language_selector_shows_flags  ✓ Проверка наличия флагов в селекторе языков
-test_app.py::test_georgian_language_support      ✓ Поддержка грузинского (ka) языка
-test_app.py::test_armenian_language_support      ✓ Поддержка армянского (hy) языка
-test_app.py::test_mode_buttons_exist             ✓ Проверка наличия кнопок Basic/Engineering
-```
+Текущий прогон на CI/локально: `289 passed`, общий coverage по пакету `calk` ≈ **90%**.
 
-#### Unit тесты бизнес-логики (21)
-
-**Базовые операции (6):**
-```
-test_calculator_service.py::test_add            ✓ 1 + 2 = 3
-test_calculator_service.py::test_sub            ✓ 5 - 3 = 2
-test_calculator_service.py::test_mul            ✓ 2 × 3 = 6
-test_calculator_service.py::test_div            ✓ 10 ÷ 2 = 5
-test_calculator_service.py::test_div_by_zero    ✓ Деление на ноль вызывает исключение
-test_calculator_service.py::test_square         ✓ 4² = 16
-```
-
-**Корни и степени (3):**
-```
-test_calculator_service.py::test_sqrt           ✓ √9 = 3
-test_calculator_service.py::test_sqrt_negative  ✓ √(-4) вызывает исключение
-test_calculator_service.py::test_power          ✓ 2³ = 8, 5⁰ = 1
-```
-
-**Тригонометрия (3):**
-```
-test_calculator_service.py::test_sin            ✓ sin(0°) = 0, sin(90°) = 1
-test_calculator_service.py::test_cos            ✓ cos(0°) = 1, cos(90°) = 0
-test_calculator_service.py::test_tan            ✓ tan(0°) = 0
-```
-
-**Логарифмы и экспонента (3):**
-```
-test_calculator_service.py::test_log10          ✓ log₁₀(10) = 1, log₁₀(100) = 2
-test_calculator_service.py::test_ln             ✓ ln(e) = 1
-test_calculator_service.py::test_exp            ✓ e⁰ = 1, e¹ = e
-```
-
-**Утилиты (4):**
-```
-test_calculator_service.py::test_factorial      ✓ 5! = 120, 0! = 1
-test_calculator_service.py::test_reciprocal     ✓ 1/2 = 0.5, 1/0.5 = 2
-test_calculator_service.py::test_reciprocal_zero ✓ 1/0 вызывает исключение
-test_calculator_service.py::test_percent        ✓ 50% = 0.5, 100% = 1
-```
-
-**Специальные (2):**
-```
-test_calculator_service.py::test_negate         ✓ -5 = -5, -(-3) = 3
-test_calculator_service.py::test_constants      ✓ π ≈ 3.14159, e ≈ 2.71828
-```
-
-### Запуск тестов с покрытием
+### Как запускать тесты
 
 ```bash
-pytest --cov=calk tests/
+source .venv/bin/activate
+pip install -r requirements.txt
+pytest -q --disable-warnings --maxfail=1 --cov=calk --cov-report=term-missing
 ```
 
 ## Обработка ошибок
