@@ -5,7 +5,8 @@ for invalid operations (division by zero, sqrt of negative).
 """
 from math import sqrt as _sqrt, sin as _sin, cos as _cos, tan as _tan
 from math import log as _log, log10 as _log10, exp as _exp, radians, degrees
-from math import factorial as _factorial, pi, e
+from math import factorial as _factorial
+import math as _math
 
 
 class CalculatorError(Exception):
@@ -111,9 +112,15 @@ def reciprocal(a: float) -> float:
     return 1.0 / a
 
 
-def percent(a: float) -> float:
-    """Percent (divide by 100)."""
-    return a / 100.0
+def percent(a: float, total: float | None = None) -> float:
+    """Percent helper.
+
+    - If `total` is None: treat `a` as a percentage and return `a / 100`.
+    - If `total` is provided: return `a/100 * total` (a percent of total).
+    """
+    if total is None:
+        return a / 100.0
+    return (a / 100.0) * total
 
 
 def negate(a: float) -> float:
@@ -123,9 +130,19 @@ def negate(a: float) -> float:
 
 def get_pi() -> float:
     """Return pi constant."""
-    return pi
+    return _math.pi
 
 
 def get_e() -> float:
     """Return e constant."""
-    return e
+    return _math.e
+
+
+def pi() -> float:
+    """Backward-compatible function returning pi (some tests expect callable)."""
+    return _math.pi
+
+
+def euler() -> float:
+    """Backward-compatible function returning Euler's number."""
+    return _math.e
